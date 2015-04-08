@@ -1300,7 +1300,7 @@ define([
                     });
                 }],
                 filters: [
-                    {action: 'list', type: 'multimedia'}
+                    {action: 'list', type: 'aapmm'}
                 ],
                 privileges: {fetch: 1}
             });
