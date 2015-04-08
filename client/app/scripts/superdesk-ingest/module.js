@@ -47,6 +47,9 @@ define([
         dpa: {
             label: 'DPA',
             templateUrl: 'scripts/superdesk-ingest/views/settings/aapConfig.html'
+        },
+        search: {
+            label: 'Search provider'
         }
     });
 
@@ -518,7 +521,9 @@ define([
                         }
                     });
 
-                    $scope.provider.config.field_aliases = newAliases;
+                    if (newAliases.length > 0) {
+                        $scope.provider.config.field_aliases = newAliases;
+                    }
 
                     api.ingestProviders.save($scope.origProvider, $scope.provider)
                     .then(function() {
