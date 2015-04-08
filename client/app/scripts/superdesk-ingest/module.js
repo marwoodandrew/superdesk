@@ -521,7 +521,7 @@ define([
                         }
                     });
 
-                    if (newAliases.length > 0) {
+                    if (typeof($scope.provider.config) !== 'undefined') {
                         $scope.provider.config.field_aliases = newAliases;
                     }
 
